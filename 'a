@@ -1,0 +1,44 @@
+#!/usr/bin/env python2
+#-*- coding:utf-8 -*-
+
+
+class Node(object):
+	def __init__(self,value):
+		self.value = value
+		self.left,self.right = None,None
+
+
+#采用层序遍历(BFS)
+
+class Solution(object):
+
+	def serialize(self,root):
+		queue = []
+		queue.append(root)
+		str_buffer = []
+		while len(queue) != 0:
+			node = queue.pop(0)
+			str_buffer.append(node.value)	
+				
+			
+
+			
+		
+	
+	def deseriable(self,data):
+			
+				
+		
+
+
+test_case = "{3,9,20,#,#,15,7}"
+
+solution = Solution()
+
+tree = solution.deseriable(test_case)
+print(tree)
+output_str = solution.serialize(tree)
+print(output_str)
+
+
+
