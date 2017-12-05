@@ -64,6 +64,8 @@ class SuffixArray(object):
 			print self.raw_string[elem:]	
 		print "... suffix_array }}}"
 
+	
+	
 sa = SuffixArray("helloallen")
 #print(sa)
 sa.debug()
