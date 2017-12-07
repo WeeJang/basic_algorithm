@@ -10,7 +10,7 @@ the contiguous subarray [4,−1,2,1] has the largest sum = 6."""
 
 
 """
- O(n)
+http://blog.csdn.net/ns_code/article/details/20942045)
 """
 
 def get_max_subarray_sum_by_dp(list_):
