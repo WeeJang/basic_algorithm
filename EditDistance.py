@@ -13,7 +13,8 @@ def get_edit_distance(str_1,str_2):
     if str_1_len * str_2_len == 0:
         return 0
     # dummy for [0:],[:0]
-    D = [ [0] * (str_1_len + 1)] * (str_2_len +1)
+    #D = [ [0] * (str_1_len + 1)] * (str_2_len +1)
+    D = [ [ 0 for col in range(str_1_len + 1) ] for row in range(str_2_len) ]
     for i in range(1,str_2_len + 1):
         for j in range(1,str_1_len + 1):
             D[i][j] = max(D[i-1][j],D[i][j-1],\

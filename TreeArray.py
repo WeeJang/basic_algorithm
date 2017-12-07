@@ -19,7 +19,7 @@ class TreeArray(object):
 	def query(self,index):
 		assert index <= self.__n__
 		sum_ = 0
-		while index <= 0:
+		while index >= 0:
 			sum_ += self.__array__[index]
 			index -= lowbit(index)
 		return sum_	

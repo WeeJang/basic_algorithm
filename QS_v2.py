@@ -1,5 +1,4 @@
 #!/usr/bin/env python2
-
 #beautiful code
 
 def QS(int_list,start_pos,end_pos):

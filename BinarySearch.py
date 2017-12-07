@@ -8,6 +8,7 @@ def binary_search(elem_list,target):
 	if len(elem_list) == 0:
 		return -1
 	start,end = 0,len(elem_list) - 1
+	# elem_list[start] <= target && elem_list[end] > target
 	while start + 1 < end:
 		mid = start + (end-start) / 2
 		if elem_list[mid] > target:
@@ -27,7 +28,8 @@ def find_min(elem_list):
 	
 	start,end = 0,len(elem_list)-1
 	target = elem_list[-1]
-	
+
+	#循环不变式 elem_list[end] < target 也就是说 end 肯定在小于target的那段	
 	while start + 1 < end:
 		mid = start + (end - start) / 2
 		if elem_list[mid] < target:
