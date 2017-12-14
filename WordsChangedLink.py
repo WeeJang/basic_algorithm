@@ -1,6 +1,8 @@
 #!/usr/bin/env python2
 #-*- coding:utf-8 -*-
 
+""" 单词接龙问题 """
+
 """ 特点:全部小写，长度还一样。其实可以遍历（字母表）获得dis=1的东西 """
 
 def ladderLength(start, end, words_set):

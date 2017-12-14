@@ -2,3 +2,4 @@
 #-*- coding:utf-8 -*-
 
 """ Boyer-Moore """
+i
