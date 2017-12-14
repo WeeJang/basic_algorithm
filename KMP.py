@@ -7,6 +7,8 @@
 	（AC-aumtion是多模式的KMP)
 	[2] http://blog.csdn.net/yutianzuijin/article/details/11954939/
 	
+	3 next_array 是最长后缀的匹配的最长前缀
+	
 """
 
 def KMP(pattern,string):
@@ -20,8 +22,8 @@ def KMP(pattern,string):
 		next_array = [ -1 for i in range(len(pattern)) ]
 		for i in range(1,len(pattern)):
 			j = next_array[i-1]
+			#寻找pattern[:i]的后缀中能与自己匹配到最长前缀的那个
 			while j != -1 and pattern[i-1] != pattern[j]:
-				print(j,next_array)
 				j = next_array[j]
 			if pattern[i-1] == pattern[j]: #第pattern[i-1]与pattern[j]配上了
 				next_array[i] = j + 1
