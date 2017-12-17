@@ -63,13 +63,13 @@ def get_longest_hw_DP_BU(str_):
 		for j in range(0,i):
 			M[i][j] = 0
 	print M		
-	for step in range(1,len(str_)):
-		for i in range(len(str_)):
+	for step in range(1,len(str_)):#step 代表子问题规模
+		for i in range(len(str_)): #求M[i,j]
 			j = i + step
 			if j > len(str_) - 1:
 				break	
 			max_len = float("-inf")
-			for m in range(0,j):
+			for m in range(0,j): #枚举切割点
 				cur_len = 0
 				if str_[m] == str_[j]:
 					cur_len = 2 + M[m+1][j-1]
