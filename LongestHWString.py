@@ -2,9 +2,7 @@
 #-*- coding:utf-8 -*-
 
 """ 最长回文子序列问题 
-
-	DP : (1)最优子结构 (2)子问题重叠 
-"""
+DP : (1)最优子结构 (2)子问题重叠 """
 
 def get_longest_hw_naive(str_,start_pos,end_pos):
 	""" 这是采用朴素递归方法 
