@@ -5,7 +5,6 @@
 ## min-heap A[i]<=A[2*i+1] && A[i]<=A[2*i+2]
 
 """ 堆的时间复杂度
-	
 	堆化:heapify -> O(n)  有1/2的节点比较1次，1/4比较2次，1/8比较3次..1/2^k 比较K次。
         堆排序: -> O(nlogn) #最坏情况的下届
 """
@@ -37,6 +36,7 @@ class MinHeap(object):
 			self.shift(smallest)	
 	
 	def create_by_array(self,array):
+		""" 看似是O(n*lg(n))其实并不是，是O(n) 证明"""
 		self.array = array
 		self.len_ = len(self.array)
 		for i in range(self.len_/2-1,-1,-1):
@@ -63,19 +63,7 @@ class MinHeap(object):
 		target_index = self.len_ - 1
 		while self.array[target_index] >= elem
 			self.array[target_index] = self.array[(self.len_ - 1)/2]
+			target_index = (self.len_ - 1)/2
 		self.array[target_index] = elem
 		
 		
-
-		
-
-
-
-
-
-
-	
-
-
-
-				

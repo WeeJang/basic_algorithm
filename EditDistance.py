@@ -23,8 +23,8 @@ def get_edit_distance(str_1,str_2):
     for j in range(len(D[0])):
 	D[0][j] = j
 
-    for i in range(1,str_2_len + 1):
-        for j in range(1,str_1_len + 1):
+    for i in range(1,str_2_len + 1): #i代表的step,就是步长，意味着问题规模。问题规模从小到大
+        for j in range(1,str_1_len + 1): #j代表的启始位置
             D[i][j] = min(D[i-1][j]+1,D[i][j-1]+1,\
 			D[i-1][j-1] + ( 0 if str_2[i-1]==str_1[j-1] else 1 ))
     print D
