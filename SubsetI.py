@@ -3,9 +3,7 @@
 
 
 """
-问题延伸自,如果nums里面存在重复元素
-
-求子集问题(里面存在重复元素）
+求子集问题(里面没有重复元素）
 
 
 Given a collection of integers that not contain duplicates, nums, return all possible subsets (the power set).
